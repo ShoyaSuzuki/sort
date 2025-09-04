@@ -2,15 +2,15 @@
     function heapify(array &$list, int $n, int $i)
     {
         $largest = $i;
-        $left_child = 2 * $i + 1;
-        $right_child = 2 * $i + 2;
+        $leftChild = 2 * $i + 1;
+        $rightChild = 2 * $i + 2;
 
-        if ($left_child < $n && $list[$left_child] > $list[$largest]) {
-            $largest = $left_child;
+        if ($leftChild < $n && $list[$leftChild] > $list[$largest]) {
+            $largest = $leftChild;
         }
 
-        if ($right_child < $n && $list[$right_child] > $list[$largest]) {
-            $largest = $right_child;
+        if ($rightChild < $n && $list[$rightChild] > $list[$largest]) {
+            $largest = $rightChild;
         }
 
         if ($largest !== $i) {
